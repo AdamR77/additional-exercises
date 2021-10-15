@@ -1,5 +1,5 @@
 
-from typing import List
+#
 
 # słownik
 # 1. Stwórz z listy liczb histogram.
@@ -78,7 +78,7 @@ print(example_dict.keys(), "\n")
 # 6. Stwórz listę zawierającą pary (tuple) klucz, wartość ze słownika
 
 example_dict_list = [example_dict.items()]
-print(example_dict_list)
+print(example_dict_list, "\n")
 
 
 
@@ -86,12 +86,29 @@ print(example_dict_list)
 
 
 # Przy użyciu słownika, sprawdź czy w liście liczb są dwie liczby, które sumują się do danej liczby. Uwaga: iterując tylko raz (tylko w jednej pętli)
+number_list = [1, 2, 3, 5, 8, 10, 12, 22, 50 ]
+number_key = 22
+sums_dict = {}
+def check(number_list, number_key):
+  for number in number_list:
+    for number2 in number_list:
+      if number + number2 == number_key:
+        sums_dict[number_key] = (number, number2)
+  return True, sums_dict      
+  pass
+print(check(number_list, number_key), "\n")
 
+ 
 
 # 7. Usuń wartość ze słownika
+ # samą wartość???
+ # wartośc z kluczem:
+del sums_dict[number_key]
+print(sums_dict, "\n")
 
-def check(list: List[int], target: int):
-  pass
+
+
+
 
 # lista
 
